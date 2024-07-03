@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Contract Interaction</title>
+    <title>Argochain Relay Bridge</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script src="main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Smart Contract Interaction</h1>
+        <h1>Argochain Relay Bridge</h1>
         <button id="connectWalletButton" onclick="connectWallet()">Connect Wallet</button>
         <p id="walletAddress"></p>
     </header>
@@ -18,8 +18,6 @@
     <main>
         <section>
             <h2>Approve Contract</h2>
-            <label for="spenderApprove">Spender Address:</label>
-            <input type="text" id="spenderApprove" placeholder="Enter spender address">
             <label for="amountApprove">Amount:</label>
             <input type="text" id="amountApprove" placeholder="Enter amount">
             <button onclick="approve()">Approve</button>
@@ -56,6 +54,14 @@
             <h2>Get Contract Owner</h2>
             <button onclick="getOwner()">Get Owner</button>
             <p id="resultGetOwner"></p>
+        </section>
+
+        <section>
+            <h2>Burn Tokens</h2>
+            <label for="amountBurn">Amount:</label>
+            <input type="text" id="amountBurn" placeholder="Enter amount">
+            <button onclick="burnTokens()">Burn Tokens</button>
+            <p id="resultBurn"></p>
         </section>
     </main>
 </body>
