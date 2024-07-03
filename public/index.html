@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contract Interaction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Smart Contract Interaction</h1>
+        <button id="connectWalletButton" onclick="connectWallet()">Connect Wallet</button>
+        <p id="walletAddress"></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Approve Contract</h2>
+            <label for="spenderApprove">Spender Address:</label>
+            <input type="text" id="spenderApprove" placeholder="Enter spender address">
+            <label for="amountApprove">Amount:</label>
+            <input type="text" id="amountApprove" placeholder="Enter amount">
+            <button onclick="approve()">Approve</button>
+            <p id="resultApprove"></p>
+        </section>
+
+        <section>
+            <h2>Get Locked Balance</h2>
+            <label for="accountGetLockedBalance">Account Address:</label>
+            <input type="text" id="accountGetLockedBalance" placeholder="Enter account address">
+            <button onclick="getLockedBalance()">Get Locked Balance</button>
+            <p id="resultGetLockedBalance"></p>
+        </section>
+
+        <section>
+            <h2>Get Substrate Address</h2>
+            <label for="accountGetSubstrateAddress">Account Address:</label>
+            <input type="text" id="accountGetSubstrateAddress" placeholder="Enter account address">
+            <button onclick="getSubstrateAddress()">Get Substrate Address</button>
+            <p id="resultGetSubstrateAddress"></p>
+        </section>
+
+        <section>
+            <h2>Lock Tokens</h2>
+            <label for="amountLockTokens">Amount:</label>
+            <input type="text" id="amountLockTokens" placeholder="Enter amount">
+            <label for="substrateAddressLockTokens">Substrate Address:</label>
+            <input type="text" id="substrateAddressLockTokens" placeholder="Enter substrate address">
+            <button onclick="lockTokens()">Lock Tokens</button>
+            <p id="resultLockTokens"></p>
+        </section>
+
+        <section>
+            <h2>Get Contract Owner</h2>
+            <button onclick="getOwner()">Get Owner</button>
+            <p id="resultGetOwner"></p>
+        </section>
+    </main>
+</body>
+</html>
